@@ -4112,7 +4112,7 @@ const exec = __nccwpck_require__(514);
 async function run() {
   const fontcVersionTag = core.getInput("version-tag");
   const fontcBranch = core.getInput("branch");
-  const fontcGitSha = core.getInput("git-sha");
+  const fontcGitSha = core.getInput("commit-sha");
   const fontcArgs = core.getInput("args");
   const sourcePath = core.getInput("source-path");
 
