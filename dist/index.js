@@ -4140,7 +4140,7 @@ async function run() {
     // Show the installed version
     console.log("");
     console.log("Installed fontc version:");
-    await exec.exec("fontc --version");
+    await exec.exec("fontc --help");
   } catch (error) {
     core.setFailed(
       `fontc-action failed during installation attempt with the error: ${error.message}`
