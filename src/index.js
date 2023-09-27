@@ -46,7 +46,7 @@ async function run() {
     }
   } catch (error) {
     core.setFailed(
-      `fontc-action failed during installation attempt with the error: ${error.message}`
+      `fontc-action failed during font compile attempt with the error: ${error.message}`
     );
   }
 
