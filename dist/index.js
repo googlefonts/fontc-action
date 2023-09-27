@@ -4137,20 +4137,30 @@ async function run() {
         "cargo install --branch main --git https://github.com/googlefonts/fontc.git"
       );
     }
-    // Show the installed version
-    console.log("");
-    console.log("Installed fontc version:");
-    await exec.exec("fontc --help");
   } catch (error) {
     core.setFailed(
       `fontc-action failed during installation attempt with the error: ${error.message}`
     );
   }
 
-  // Input tests
-  console.log(`Received input fontc args: ${fontcArgs}`);
-  console.log(`Received input file path: ${sourcePath}`);
-}
+  // ==================
+  // Build font(s)
+  // ==================
+  try {
+    if (fontcArgs !== "none") {
+      await exec.exec(`fontc ${fontcArgs} --source ${sourcePath}`);
+    } else {
+      await exec.exec(`fontc  ${sourcePath}`);
+    }
+  } catch (error) {
+    core.setFailed(
+      `fontc-action failed during installation attempt with the error: ${error.message}`
+    );
+  }
+
+  // Exit status message
+  console.log("Build complete.");
+} // end run
 
 run();
 
