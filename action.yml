@@ -2,22 +2,22 @@ name: "fontc Font Compiler"
 description: "Compile fonts from source files with the Rust fontc compiler."
 inputs:
   source-path:
-    description: "Path to the Designspace, UFO, or Glyphs source file"
+    description: "Path to a Designspace, UFO, or Glyphs source file"
     required: true
   args:
     description: "fontc command line arguments"
     required: false
     default: "none"
   version-tag:
-    description: "fontc git version tag"
+    description: "Use fontc at a repository git version tag"
     required: false
     default: "none"
   branch:
-    description: "fontc repository git branch HEAD commit"
+    description: "Use fontc built at a repository git branch HEAD commit"
     required: false
     default: "main"
   commit-sha:
-    description: "fontc repository git commit SHA"
+    description: "Use fontc built at a repository git commit SHA"
     required: false
     default: "none"
 
