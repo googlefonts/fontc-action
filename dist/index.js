@@ -4150,7 +4150,7 @@ async function run() {
     if (fontcArgs !== "none") {
       await exec.exec(`fontc ${fontcArgs} --source ${sourcePath}`);
     } else {
-      await exec.exec(`fontc  ${sourcePath}`);
+      await exec.exec(`fontc --source ${sourcePath}`);
     }
   } catch (error) {
     core.setFailed(
