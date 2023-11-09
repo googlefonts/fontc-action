@@ -4122,19 +4122,19 @@ async function run() {
   try {
     if (fontcGitSha !== "none") {
       await exec.exec(
-        `cargo install --rev ${fontcGitSha} --git https://github.com/googlefonts/fontc.git`
+        `cargo install --rev ${fontcGitSha} --git https://github.com/googlefonts/fontc.git fontc`
       );
     } else if (fontcBranch !== "main") {
       await exec.exec(
-        `cargo install --branch ${fontcBranch} --git https://github.com/googlefonts/fontc.git`
+        `cargo install --branch ${fontcBranch} --git https://github.com/googlefonts/fontc.git fontc`
       );
     } else if (fontcVersionTag !== "none") {
       await exec.exec(
-        `cargo install --tag ${fontcVersionTag} --git https://github.com/googlefonts/fontc.git main`
+        `cargo install --tag ${fontcVersionTag} --git https://github.com/googlefonts/fontc.git fontc`
       );
     } else {
       await exec.exec(
-        "cargo install --branch main --git https://github.com/googlefonts/fontc.git"
+        "cargo install --branch main --git https://github.com/googlefonts/fontc.git fontc"
       );
     }
   } catch (error) {
