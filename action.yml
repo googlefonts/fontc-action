@@ -20,6 +20,10 @@ inputs:
     description: "Use fontc built at a repository git commit SHA"
     required: false
     default: "none"
+  debug:
+    description: "Use a debug build of the fontc compiler"
+    required: false
+    default: "false"
 
 runs:
   using: "node20"
