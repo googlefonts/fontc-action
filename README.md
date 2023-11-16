@@ -100,7 +100,7 @@ fontc-action uses the default `fontc` compiler option definitions to build fonts
 
 #### `debug`
 
-**Optional** Use a fontc compiler debug build for font compilation.  Set the value to `true` to use a debug build. Do not define the field in your workflow or set to `false` to use a release build.
+**Optional** Use a fontc compiler debug build for font compilation.  Set the value to `true` to use a debug build. Do not define the field in your workflow or set to `false` to use a release build.  Default: `false`
 
 ```yaml
   debug: true
