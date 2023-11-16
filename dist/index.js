@@ -27396,7 +27396,7 @@ async function run() {
   try {
     let buildCommand = "";
     if (useDebugBuild === "false") {
-      buildCommand = "cargo install --release";
+      buildCommand = "cargo install";
     } else if (useDebugBuild === "true") {
       buildCommand = "cargo install --debug";
     } else {
