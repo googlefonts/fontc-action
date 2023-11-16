@@ -97,6 +97,15 @@ fontc-action uses the default `fontc` compiler option definitions to build fonts
 ```yaml
   args: --flatten-components
 ```
+
+#### `debug`
+
+**Optional** Use a fontc compiler debug build for font compilation.  Set the value to `true` to use a debug build. Do not define the field in your workflow or set to `false` to use a release build.
+
+```yaml
+  debug: true
+```
+
 ## Outputs
 
 None
