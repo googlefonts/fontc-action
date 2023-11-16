@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.3.0
+
+- fix incorrect cargo command for release build installs
+
 ## v1.2.0
 
 - add fontc compiler debug build support with a new `debug` configuration input
