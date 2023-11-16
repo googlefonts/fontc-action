@@ -33,9 +33,7 @@ jobs:
       - name: Check out font project source repository
         uses: actions/checkout@v4
       - name: Install the latest stable Rust toolchain
-        uses: actions-rs/toolchain@v1
-        with:
-          toolchain: stable
+        uses: dtolnay/rust-toolchain@stable
       - name: Install fontc and compile fonts
         uses: googlefonts/fontc-action@main
         with:
