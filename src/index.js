@@ -48,6 +48,17 @@ async function run() {
     );
   }
 
+  // =====================================
+  // Report installed fontc build version
+  // =====================================
+  try {
+    await exec.exec(`fontc --vv`);
+  } catch (error) {
+    core.setFailed(
+      `fontc-action failed during attempt to report fontc version: ${error.message}`
+    );
+  }
+
   // ==================
   // Build font(s)
   // ==================
